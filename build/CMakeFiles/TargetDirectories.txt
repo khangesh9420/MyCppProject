@@ -1,0 +1,6 @@
+C:/Users/khang/Desktop/Test/MyCppProject/build/CMakeFiles/MyCppProject.dir
+C:/Users/khang/Desktop/Test/MyCppProject/build/CMakeFiles/edit_cache.dir
+C:/Users/khang/Desktop/Test/MyCppProject/build/CMakeFiles/rebuild_cache.dir
+C:/Users/khang/Desktop/Test/MyCppProject/build/MyLibrary/CMakeFiles/MyLibrary.dir
+C:/Users/khang/Desktop/Test/MyCppProject/build/MyLibrary/CMakeFiles/edit_cache.dir
+C:/Users/khang/Desktop/Test/MyCppProject/build/MyLibrary/CMakeFiles/rebuild_cache.dir
