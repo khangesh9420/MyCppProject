@@ -1,0 +1,28 @@
+name: Deploy to Artifactory
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up JFrog CLI
+      run: |
+        echo //jfrog.io/artifactory/api/npm/npm:registry=https://jfrog.io/artifactory/api/npm/npm > "$env:APPDATA\npmrc"
+        jfrog rt config --url=https://https://khangesh.jfrog.io/artifactory/git_libraries-generic-local/ --user=amitwate9420@gmail.com --apikey=AKCpBrv6cHjpcyWdcPErq5spM3gKQGqrTaSdmTPbHnsyuwbVj3jHSMkdgXT2U21dhC3QQm1tw
+
+    - name: Build and deploy
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        cpack -G ZIP
+        jfrog rt u "*.zip" "git_libraries-generic-local/MyCppProject/1.0.0" --build-name="MyCppProject" --build-number="$env:GITHUB_RUN_NUMBER"
