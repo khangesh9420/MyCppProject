@@ -12,5 +12,5 @@ target_link_libraries(MyCppProject PRIVATE MyLibrary)
 
 # Set up installation for the executable and library
 install(TARGETS MyCppProject DESTINATION bin)
-install(DIRECTORY MyLibrary/ DESTINATION lib)
 install(TARGETS MyLibrary DESTINATION lib)
+
