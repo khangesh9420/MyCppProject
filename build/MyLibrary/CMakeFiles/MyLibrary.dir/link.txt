@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libMyLibrary.a CMakeFiles/MyLibrary.dir/mylibrary.cpp.obj
-C:\MinGW\bin\ranlib.exe libMyLibrary.a
